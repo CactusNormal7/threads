@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 
-import '../globals.css'
+import "../globals.css";
 
 //n'affiche pas la navbar ou le footer
 export const metadata = {
@@ -9,12 +9,12 @@ export const metadata = {
     description: "next js 13 application",
 };
 
-const inter = Inter({subsets : ["latin"]})
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode;
+    children: React.ReactNode
 }) {
     return (
         <ClerkProvider>
@@ -24,5 +24,5 @@ export default function RootLayout({
                 </body>
             </html>
         </ClerkProvider>
-    )
+    );
 }
